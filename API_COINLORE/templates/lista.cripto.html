@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Criptomonedas</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Criptomonedas</h1>
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Información</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cripto in criptomonedas %}
+                    <tr>
+                        <td>
+                            <p><strong>Símbolo:</strong> {{ cripto['symbol'] }}</p>
+                            <p><strong>Nombre:</strong> {{ cripto['name'] }}</p>
+                            <p><strong>Precio Actual:</strong> ${{ cripto['price_usd'] }}</p>
+                            <p><strong>Cambio en las últimas 24 horas:</strong> {{ cripto['percent_change_24h'] }}%</p>
+                            <a href="{{ url_for('detalle', id=cripto['id']) }}">Ver Detalles</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+</html>

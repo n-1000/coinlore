@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Criptomoneda</title>
+</head>
+<body>
+    <header>
+        <h1>Detalle de Criptomoneda</h1>
+    </header>
+
+    <section>
+        <p><strong>ID:</strong> {{ cripto['id'] }}</p>
+        <p><strong>Símbolo:</strong> {{ cripto['symbol'] }}</p>
+        <p><strong>Nombre:</strong> {{ cripto['name'] }}</p>
+        <p><strong>Ranking:</strong> {{ cripto['rank'] }}</p>
+        <p><strong>Precio Actual:</strong> ${{ cripto['price_usd'] }}</p>
+        <p><strong>Cambio en las últimas 24 horas:</strong> {{ cripto['percent_change_24h'] }}%</p>
+        <p><strong>Cambio en la última hora:</strong> {{ cripto['percent_change_1h'] }}%</p>
+        <p><strong>Cambio en los últimos 7 días:</strong> {{ cripto['percent_change_7d'] }}%</p>
+        <p><strong>Capitalización de mercado (USD):</strong> ${{ cripto['market_cap_usd'] }}</p>
+        <p><strong>Volumen en las últimas 24 horas (USD):</strong> ${{ cripto['volume24'] }}</p>
+        <p><strong>Suministro circulante:</strong> {{ cripto['csupply'] }}</p>
+        <p><strong>Precio en BTC:</strong> {{ cripto['price_btc'] }}</p>
+        <p><strong>Suministro total:</strong> {{ cripto['tsupply'] }}</p>
+        <p><strong>Suministro máximo:</strong> {{ cripto['msupply'] }}</p>
+    </section>
+
+    <footer>
+        <a href="/">Volver a la lista</a>
+    </footer>
+</body>
+</html>
+
